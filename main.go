@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/razzie/uuid-server/random"
-	"github.com/razzie/uuid-server/random/seed"
+	"github.com/razzie/random"
+	"github.com/razzie/random/seed"
 )
 
 func serveUUID(w http.ResponseWriter, r *http.Request) {
