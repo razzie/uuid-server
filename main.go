@@ -2,7 +2,9 @@ package main
 
 import (
 	"flag"
+	"log"
 	"net/http"
+	"strconv"
 	"time"
 
 	"github.com/google/uuid"
@@ -16,6 +18,7 @@ func serveUUID(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	port := flag.Int("port", 8080, "http port to listen on")
 	apikey := flag.String("apikey", "", "random.org api key")
 	flag.Parse()
 
@@ -31,5 +34,5 @@ func main() {
 	uuid.SetRand(feed)
 
 	http.HandleFunc("/", serveUUID)
-	http.ListenAndServe(":8080", nil)
+	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(*port), nil))
 }
