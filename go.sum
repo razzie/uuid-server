@@ -2,3 +2,5 @@ github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
 github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/razzie/random v0.0.0-20200420035010-28cb95f41228 h1:/zYOi6E2MLc2AE13UFpK16X7JqYiEgHJMNwme6pJNSA=
 github.com/razzie/random v0.0.0-20200420035010-28cb95f41228/go.mod h1:4Q8rnm4Xbg6XV53xceC74/+9NtUh/CGzy6LR5mFNF8Y=
+github.com/razzie/random v0.0.0-20200420173538-d46cb6201459 h1:GxW4Jtzu3eQjfu7+NLzuljXyHv6pzv+Ltq9WCSrQXLY=
+github.com/razzie/random v0.0.0-20200420173538-d46cb6201459/go.mod h1:4Q8rnm4Xbg6XV53xceC74/+9NtUh/CGzy6LR5mFNF8Y=
