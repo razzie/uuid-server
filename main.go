@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"log"
+	"net"
 	"net/http"
 	"strconv"
 	"time"
@@ -15,6 +16,16 @@ import (
 func serveUUID(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain")
 	w.Write([]byte(uuid.New().String()))
+	logRequest(r)
+}
+
+func logRequest(r *http.Request) {
+	ip := r.Header.Get("X-REAL-IP")
+	if len(ip) == 0 {
+		ip, _, _ = net.SplitHostPort(r.RemoteAddr)
+	}
+
+	log.Println(ip, r.RequestURI)
 }
 
 func main() {
